@@ -32,32 +32,6 @@ const WheelCurvedPickerNative = requireNativeComponent('WheelCurvedPicker', Whee
 
 class WheelCurvedPicker extends React.Component {
 
-	propTypes: {
-		...View.propTypes,
-
-		data: PropTypes.array,
-
-		textColor: ColorPropType,
-
-		textSize: PropTypes.number,
-
-		itemStyle: PropTypes.object,
-
-		itemSpace: PropTypes.number,
-
-		onValueChange: PropTypes.func,
-
-		selectedValue: PropTypes.any,
-
-		selectedIndex: PropTypes.number,
-			
-		lineColor: PropTypes.string,
-			
-		lineGradientColorFrom: PropTypes.string,
-			
-		lineGradientColorTo: PropTypes.string,
-	}
-
 	constructor(props){
 		super(props)
 		this.state = this._stateFromProps(props)
@@ -106,15 +80,31 @@ class WheelCurvedPicker extends React.Component {
 }
 
 class Item extends React.Component {
-	propTypes: {
-		value: React.PropTypes.any, // string or integer basically
-		label: React.PropTypes.string,
-	}
 
 	render () {
 		// These items don't get rendered directly.
 		return null;
 	}
+}
+
+WheelCurvedPicker.propTypes = {
+	...View.propTypes,
+	data: PropTypes.array,
+	textColor: ColorPropType,
+	textSize: PropTypes.number,
+	itemStyle: PropTypes.object,
+	itemSpace: PropTypes.number,
+	lineColor: PropTypes.string,
+	lineGradientColorFrom: PropTypes.string,
+	lineGradientColorTo: PropTypes.string,
+	onValueChange: PropTypes.func,
+	selectedValue: PropTypes.any,
+	selectedIndex: PropTypes.number,
+}
+
+Item.propTypes = {
+	value: PropTypes.any, // string or integer basically
+	label: PropTypes.string,
 }
 
 WheelCurvedPicker.Item = Item;

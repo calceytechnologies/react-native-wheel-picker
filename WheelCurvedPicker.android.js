@@ -41,7 +41,7 @@ class WheelCurvedPicker extends React.Component {
 		itemSpace: 20
 	}
 
-	componentWillReceiveProps (props) {
+	UNSAFE_componentWillReceiveProps (props) {
 		this.setState(this._stateFromProps(props));
 	}
 

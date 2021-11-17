@@ -22,11 +22,11 @@
   },
   "homepage": "https://github.com/lesliesam/react-native-wheel-picker#readme",
   "dependencies": {
-    "@react-native-picker/picker": "^2.2.0",
+    "@react-native-picker/picker": "https://github.com/calceytechnologies/picker",
     "add": "^2.0.6",
     "yarn": "^1.22.17"
   },
   "peerDependencies": {
-    "@react-native-picker/picker": "^2.2.0"
+    "@react-native-picker/picker": "https://github.com/calceytechnologies/picker"
   }
 }
